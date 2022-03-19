@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  Dimensions,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import useRestaurant from "../hooks/useRestaurant";
 import yelp from "../api/yelp";
@@ -11,6 +18,10 @@ const RestaurantScreen = ({ navigation }) => {
     loading: false,
     error: null,
   });
+
+  const dimensions = Dimensions.get("window");
+  const imageWidth = dimensions.width;
+  const imageHeight = Math.round((dimensions.width * 9) / 16);
 
   const searchRestaurant = async () => {
     setResult({
@@ -50,7 +61,7 @@ const RestaurantScreen = ({ navigation }) => {
             console.log({ item });
             return (
               <Image
-                style={{ height: 100, width: 100 }}
+                style={{ height: imageHeight, width: imageWidth }}
                 source={{ uri: item }}
               />
             );
