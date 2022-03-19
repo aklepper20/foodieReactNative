@@ -45,7 +45,7 @@ export default function App() {
         setSelectCategory={setSelectCategory}
         selectCategory={selectCategory}
       />
-      <Restaurants />
+      <Restaurants selectCategory={selectCategory} />
       <StatusBar style="auto" />
     </View>
   );
