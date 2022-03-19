@@ -5,7 +5,6 @@ import {
   ActivityIndicator,
   FlatList,
 } from "react-native";
-import yelp from "../api/yelp";
 import React, { useEffect } from "react";
 import useRestaurants from "../hooks/useRestaurants";
 import RestaurantItem from "./RestaurantItem";
