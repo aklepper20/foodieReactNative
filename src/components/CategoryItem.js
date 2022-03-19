@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { elevation } from "./common/styles";
 
 const CategoryItem = ({ name, imageUrl, index, active, handlePress }) => {
-  console.log(active);
   return (
     <TouchableOpacity onPress={handlePress}>
       <View

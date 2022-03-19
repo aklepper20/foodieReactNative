@@ -15,7 +15,6 @@ const Restaurants = ({ selectCategory }) => {
   useEffect(() => {
     searchRestaurants(selectCategory);
   }, [selectCategory]);
-  console.log({ data: data, loading, error });
 
   if (loading)
     return (
